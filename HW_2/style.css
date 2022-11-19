@@ -27,4 +27,26 @@ legend {font-weight: bold;}
 #container p {font-size: smaller;}
 #container a {font-size: smaller;}
 
+table {
+    font-size: medium;
+    border-collapse: collapse; 
+     margin: 0 auto;
+    background:  radial-gradient(farthest-corner at 50% 50%, white, #d1b0d2);}
+    
+#cafemenu {font: 150% "Comfortaa-Bold";
+     padding-top: 10px;
+    padding-bottom: 20px;}
+.kitchen {
+                font-weight: bold;
+        text-align: center;
+      }
+      th {
+        padding: 7px; 
+        border: 1px solid;
+      }
+      td {
+               padding:7px;
+        border: 1px solid; 
+
+
 
