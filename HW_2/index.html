@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 <body>
     <h1 id="start">Домашнее задание №2</h1>
     <div id="regblock">
-        <form action="pages/loginpage.html">
+        <form action="pages/loginpage.html" target="_top">
             <fieldset>
                 <legend>Заполните, пожалуйста, регистрационную форму</legend>
                 <label for="name">Имя:</label> <br>
@@ -21,11 +21,11 @@
                 <input type="text" id="surname" name="surname"><br>
                 <label for="login">Логин:</label><br>
                 <input type="text" id="login" name="login" required> <br>
-                <label for="sex">Пол:</label>
-                <input type="radio" id="sex" name="sex" value="M">
-                <label for="radio">М</label>
-                <input type="radio" id="sex" name="sex" value="F">
-                <label for="radio">Ж</label><br>
+                <label for="mf">Пол:</label>
+                <input type="radio" id="nf" name="mf" value="M">
+                <label>М</label>
+                <input type="radio" id="mf" name="mf" value="F">
+                <label>Ж</label><br>
                 <label for="email">Почта:</label> <br>
                 <input type="email" id="email" name="email" required> <br>
                 <label for="password">Пароль:</label> <br>
@@ -39,12 +39,13 @@
                 <textarea id="about" name="about" rows="5" cols="30"> </textarea> <br>
                 <label for="spam">Хотите ли вы получать нашу рассылку?</label> <br>
                 <input type="checkbox" id="spam" name="spam" value="yes">
-                <label for="checkbox">Да</label> <br>
+                <label>Да</label> <br>
                 <button>Подтвердить</button> <input type="reset">
                 <!--<input type="submit" value="Submit"> используется для сбора информации из формы,
     но, так как нужно перенаправление на другую страницу, был использован <button>-->
             </fieldset>
+        </form>
     </div>
-    </form>
 </body>
+
 </html>

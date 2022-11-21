@@ -1,52 +1,94 @@
-body{font: medium /1.3em sans-serif;}
+body {
+    font: medium /1.3em sans-serif;
+}
+
 @font-face {
-    font-family: "Comfortaa-Bold" ;
+    font-family: "Comfortaa-Bold";
     src: url(fonts/Comfortaa-Bold.ttf);
 }
-#start {font: 250% "Comfortaa-Bold";text-align: center;}
-#regblock {width: fit-content; 
-    padding: 20px; 
-    margin: 0 auto;     
- border: dashed white 2px; 
- border-radius: 15px;
- background:#d1b0d2 url(images/register.png) no-repeat;
- background-position: 250px 70px;
+
+#start {
+    font: 250% "Comfortaa-Bold";
+    text-align: center;
 }
-legend {font-weight: bold;}
-#container {width: fit-content; 
+
+#regblock {
+    width: fit-content;
+    padding: 20px;
+    margin: 0 auto;
+    border: dashed white 2px;
+    border-radius: 15px;
+    background: #d1b0d2 url(images/register.png) no-repeat;
+    background-position: 250px 70px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+#container {
+    width: fit-content;
     padding-bottom: 20px;
     padding-right: 20px;
-    padding-left: 200px; 
-    margin: 0 auto;     
- border: dashed white 2px; 
- border-radius: 15px;
- background:#d1b0d2 url(images/avatar.png) no-repeat;
- background-position: 20px 70px;
+    padding-left: 200px;
+    margin: 0 auto;
+    border: dashed white 2px;
+    border-radius: 15px;
+    background: #d1b0d2 url(images/avatar.png) no-repeat;
+    background-position: 20px 70px;
 }
-#container h2  {font: 150% "Comfortaa-Bold";}
-#container p {font-size: smaller;}
-#container a {font-size: smaller;}
+
+#container h2 {
+    font: 150% "Comfortaa-Bold";
+}
+
+#container p {
+    font-size: smaller;
+}
+
+#container a {
+    font-size: smaller;
+}
 
 table {
     font-size: medium;
-    border-collapse: collapse; 
-     margin: 0 auto;
-    background:  radial-gradient(farthest-corner at 50% 50%, white, #d1b0d2);}
-    
-#cafemenu {font: 150% "Comfortaa-Bold";
-     padding-top: 10px;
-    padding-bottom: 20px;}
+    border-collapse: collapse;
+    margin: 0 auto;
+    background: radial-gradient(farthest-corner at 50% 50%, white, #d1b0d2);
+}
+
+#cafemenu {
+    font: 150% "Comfortaa-Bold";
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
 .kitchen {
-                font-weight: bold;
-        text-align: center;
-      }
-      th {
-        padding: 7px; 
-        border: 1px solid;
-      }
-      td {
-               padding:7px;
-        border: 1px solid; 
+    font-weight: bold;
+    text-align: center;
+}
 
+th {
+    padding: 7px;
+    border: 1px solid;
+}
 
+td {
+    padding: 7px;
+    border: 1px solid;
+}
 
+.drinks {
+    border: #e560ea dotted 2px;
+    width: 210px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background: url("images/cocktail.gif") repeat-x;
+    display: inline-block;
+}
+
+#aboutcoffee {
+    width: fit-content;
+    text-align: left;
+}
