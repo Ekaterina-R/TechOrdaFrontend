@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font: medium /1.3em sans-serif;
+        }
+
+        @font-face {
+            font-family: "Comfortaa-Bold";
+            src: url(../fonts/Comfortaa-Bold.ttf);
+        }
+
+        #container {
+            width: fit-content;
+            padding-bottom: 20px;
+            padding-right: 20px;
+            padding-left: 200px;
+            margin: 0 auto;
+            border: dashed white 2px;
+            border-radius: 15px;
+            background: #d1b0d2 url(../images/avatar.png) no-repeat;
+            background-position: 20px 70px;
+        }
+input:hover{
+    background-color: rgb(4, 188, 173);
+    font-weight: bold;}
+        h2 {
+            font: 150% "Comfortaa-Bold";
+        }
+
+        p {
+            font-size: smaller;
+        }
+
+        a {
+            font-size: smaller;
+        }
+    </style>
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="container">
+        <H2>Вход на страницу</H2>
+        <p>Все поля обязательны для заполнения</p>
+        <form action="main.html" target="_top">
+            <label for="email">Почта:</label> <br>
+            <input type="email" id="email" name="email" required> <br>
+            <label for="password">Пароль:</label> <br>
+            <input type="password" id="password" name="password" required> <br>
+            <input type="checkbox" id="remember" name="remember" value="yes">
+            <label>Запомнить меня</label> <br>
+            <button>Войти</button> <br>
+        </form>
+        <a href="">Забыли пароль?</a>
+    </div>
+</body>
+
+</html>
