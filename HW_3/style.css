@@ -21,10 +21,14 @@ body {
     background: #d1b0d2 url(images/register.png) no-repeat;
     background-position: 250px 70px;
 }
-    :required {
-    border: 2px solid  red;
+
+:required {
+    border: 2px solid red;
 }
-button:hover {color: red;}
+
+button:hover {
+    color: red;
+}
 
 legend {
     font-weight: bold;
@@ -35,11 +39,15 @@ table {
     border-collapse: collapse;
     margin: 0 auto;
 }
-tr:nth-child(odd) {background-color:#d1b0d2;}
-tr:last-child {background-color: #cd5ed1;}
-th,#tablehead {
-    background-color: #cd5ed1;}
-    
+
+tr:nth-child(odd) {
+    background: radial-gradient(farthest-corner at 50% 50%, white, #d1b0d2)
+}
+
+tr:last-child,
+tr.tablehead {
+    background: radial-gradient(farthest-corner at 50% 50%, white, #cd5ed1)
+}
 
 #cafemenu {
     font: 150% "Comfortaa-Bold";
@@ -76,5 +84,12 @@ td {
     width: fit-content;
     text-align: left;
 }
-h1~p {background-color: #d1b0d2;}
-#selectorExp::first-line {color: #cc20d2; text-decoration: underline;}
+
+h1~p {
+    background-color: #d1b0d2;
+}
+
+#selectorExp::first-line {
+    color: #cc20d2;
+    text-decoration: underline;
+}
