@@ -85,7 +85,7 @@ td {
     text-align: left;
 }
 
-h1~p {
+#selectorExp h1~p {
     background-color: #d1b0d2;
 }
 
