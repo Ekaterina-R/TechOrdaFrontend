@@ -5,21 +5,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <style>
+     body {
+  background-color: #b5a789;
+  font-family: sans-serif;
+  font-size: small;
+  margin: 0px;
+}
+header{
+  background: #8d7e63 url(../images/background2.gif) left;
+  margin: 10px 10px 0px 10px;
+  height: 200px;
+}
+header img#headerSlogan {
+  position:;
+}
+#container {display: flex;
+    width: auto;
+    height:max-content;
+    
+  }
+#drinks {
+    width: 20%;
+  background-color: #efe5d0;
+  margin: 10px;
+  padding: 7px;
+  vertical-align: top;
+}
+
+main {
+   width: 45%;
+   background: #efe5d0 url(../images/background.gif) top left;
+  font-size: 105%;
+  margin: 10px 0px 10px 0px;
+  padding: 7px;
+  vertical-align: top;
+  text-align: justify;
+ 
+}
+main h1{text-align: left;}
+
+#order {
+   width: 35%;
+  background: #efe5d0 url(../images/background.gif) bottom right;
+  font-size: 105%;
+  margin: 10px;
+  padding: 7px;
+  vertical-align: top;
+  text-align: justify;
+}
+.slogan {
+  color: #954b4b;
+  text-align: center;
+}
+footer {
+  background-color: #675c47;
+  color: #efe5d0;
+  text-align: center;
+  padding: 15px;
+  margin: 0px 10px 10px 10px;
+  font-size: 90%;
+}
+
+    </style>
     <title>Наше кафе</title>
 </head>
 
 <body>
-    <header class="top">
-        <img id="headerLogo" src="images//headerlogo.gif" alt="Starbuzz Coffee logo image">
-        <img id="headerSlogan" src="images/headerSlogan.gif"
+    <header>
+        <img id="headerLogo" src="../images//headerLogo.png" alt="Coffee logo image">
+        <img id="headerSlogan" src="../images/headerSlogan.gif"
             alt="Providing all the caffeine you need to power your life">
     </header>
 
-    <div id="award">
+   <!---- <div id="award">
         <img src="images/award.gif" alt="Награда обжарщику кофейных зерен года">
-    </div>
+    </div>-->
 
+    <div id="container">
     <aside id="drinks">
         <h1>НАПИТКИ</h1>
         <p>Домашняя смесь, $1.49</p>
@@ -90,18 +153,19 @@
             упакован и доставлен к вашей двери.
         </p>
     </aside>
+</div>
 
-    <div id="coupon">
+    <!--<div id="coupon">
         <a href="freecoffee.html" title="Щелкните здесь, чтобы получить бесплатный кофе">
             <img src="images/ticket.gif" alt="Купон на бесплатный кофе Starbuzz" />
         </a>
-    </div>
+    </div>-->
 
     <footer>
-        &copy; 2012, Starbuzz Coffee
+        &copy; 2022, Лучший кофе
         <br>
-        All trademarks and registered trademarks appearing on
-        this site are the property of their respective owners.
+        Все товарные знаки и зарегистрированные товарные знаки, фигурирующие на
+         этом сайте являются собственностью их владельцев.
     </footer>
 </body>
 
