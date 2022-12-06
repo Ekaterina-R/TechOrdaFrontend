@@ -93,3 +93,15 @@ td {
     color: #cc20d2;
     text-decoration: underline;
 }
+#cafe {
+    background: #cc20d2;
+    background-image: linear-gradient(to bottom, #cc20d2, #d1b0d2);
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+       }
+  #cafe:hover {
+    background: #3cb0fd;
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+     }
