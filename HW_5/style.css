@@ -1,0 +1,102 @@
+/*добавление шрифта Google без скачивания*/
+@import 
+url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.calc {
+    width: 400px;
+    border: 1px solid;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 5px 20px;
+    background: #d3d8f3;
+    border-radius: 10px;
+    /*добавление тени*/
+    box-shadow: 4px 4px 5px 0px rgba(29, 36, 39, 0.75), inset -3px -2px 19px 1px rgb(81, 92, 95);
+  }
+  .result {
+    width: 93%;
+    margin: 20px auto;
+    font-family: 'Audiowide', cursive;
+    text-align: right;
+    background: #607D8B;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-right: 5px;
+  }
+ /*#expr, #res {
+    background: #607D8B;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-right: 5px;
+  }*/
+  #res {
+    height: 50px;
+    font-size: 2em;
+    border-bottom: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  #expr {
+    height: 20px;
+    border-top: none;
+    color: #232d32;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+     /*отключение полосы прокрутки при переполнении*/
+    overflow: hidden;
+  }
+  
+  *.engineer {
+    display: grid;
+    /*сетка из 3 столбцов с показателями расширения 1fr*/
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom:10px;
+     }
+
+  .numbers {
+    display: grid;
+    /*сетка из 3 столбцов с показателями расширения 1fr*/
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .operations,.operations1, .clears {
+    display: flex;
+    flex-direction: column;
+  }
+  .operations *, .num * {
+    font-size: 1.5em;
+  }
+ .operations1 * {
+    font-size: 1.2em;
+  }
+
+  .clears * {
+    background: tomato;
+    color: white;
+  }
+  
+  button {
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+    outline: none;
+    font-family: 'Audiowide', cursive;
+    box-shadow: 0px 3px 0px 0px #064a97;
+  }
+  /*анимация при нажатии*/
+  button:active {
+    transform: translateY(2px);
+  }
+  
+  .num, .oper, .equals {
+    background: #141a1e;
+    color: white;
+  }
+  
+  
+  
+  

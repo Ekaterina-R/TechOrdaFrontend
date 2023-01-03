@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>калькулятор</title>
+    <title>Калькулятор</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <div class="calc">
 
-        <!--Поле для вывода результатов-->
+        <!--Поле для набора значений и вывода результата-->
         <div class="result">
           <div id="res"></div>
-          <!--<div id="expression"></div>-->
+        <!--Поле для показа цепочки расчетов--> 
+        <div id="expr"></div>
         </div>
 
         <!--Поле с инженерными функциями"-->
@@ -56,15 +57,18 @@
 
         <!--Поле с операторами-->
         <div class="operations">
-          <button class="oper" id="times">&#215</button>
-          <button class="oper" id="divide/">&#247</button>
-          <button class="oper" id="plus">+</button>
-          <button class="oper" id="minus">&#8722</button>
-          <button class="oper" id="plus-minus">&#177</button>
-          <button class="oper" id="sqrt">&#8730</button>
-          <button class="oper" id="percent">%</button>
-          <button class="oper" id="frac">1/x</button>
+            <button class="oper" id="mult">&#215</button>
+            <button class="oper" id="division">&#247</button>
+            <button class="oper" id="plus">+</button>
+            <button class="oper" id="minus">-</button>
         </div>
+
+        <div class="operations1">
+            <button class="oper" id="plus-minus">&#177</button>
+            <button class="oper" id="sqrt">&#8730</button>
+            <button class="oper" id="percent">%</button>
+            <button class="oper" id="frac">1/x</button>
+          </div>
 
         <!--Поле с дополнительными кнопками-->
         <div class="clears">
