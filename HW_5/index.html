@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="calc">
+
+        <!--Поле для набора значений и вывода результата-->
+        <div class="result">0</div>
+        
+        <!--Поле с кнопками и функциями при нажатии"-->
+        <div class="body">
+          <button class="type">deg</sup></button>     
+          <button class="eng" onclick="f('sin')">sin</button>
+          <button class="eng" onclick="f('cos')">cos</button>
+          <button class="eng" onclick="f('tan')">tan</button>
+          <button class="eng" onclick="f('ctg')">ctg</button>
+          <button class="eng" onclick="operation('sqr')">x<sup>2</sup></button>
+          <button class="eng" onclick="operation('^')">x<sup>y</sup</button>
+          <button class="eng" onclick="operation('sqrt')">&#8730x</button>   
+          <button class="eng" onclick="fact()">n!</button>
+          <button class="eng" onclick="log('ln')">ln</button>
+          <button class="eng" onclick="log('lg')">log</button>
+          <button class="eng" onclick="insert('(')">(</button>
+          <button class="eng" onclick="insert(')')">)</button>
+          <button class="eng" onclick="operation('^-1')">1/x</button>
+          <button class="eng" onclick="percent()">%</button>
+          <button class="numb" onclick="insert('7')">7</button>
+          <button class="numb" onclick="insert('8')">8</button>
+          <button class="numb" onclick="insert('9')">9</button>
+          <button class="operators" onclick="insert('+')">+</button>
+          <button class="eng" onclick="constant('pi')">&#960</button>   
+          <button class="numb" onclick="insert('4')">4</button>
+          <button class="numb" onclick="insert('5')">5</button>  
+          <button class="numb" onclick="insert('6')">6</button>
+          <button class="operators" onclick="insert('-')">-</button>   
+          <button class="eng" onclick="constant('e')">e</button>    
+          <button class="numb" onclick="insert('1')">1</button>
+          <button class="numb" onclick="insert('2')">2</button>
+          <button class="numb" onclick="insert('3')">3</button>
+          <button class="operators" onclick="insert('*')">&#215</button>
+          <button class="ce" onclick="clean()">CE</button>
+          <button class="dot" onclick="insert('.')">.</button>
+          <button class="numb" onclick="insert('0')">0</button>
+          <button class="bck" onclick="back()">&#8592</button>
+          <button class="operators" onclick="insert('/')">&#247</button>
+          <button class="equal" onclick="equal()">=</button>  
+        </div>
+      </div>  
+      <script src="calc.js"></script> 
+</body>
+</html>
