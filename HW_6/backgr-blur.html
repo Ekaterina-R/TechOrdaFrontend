@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!--чтобы оригинал видео был виден, можно убрать hidden-->
+  <video class="input_video" hidden></video>
+    <canvas class="output_canvas" width="640px" height="480px"></canvas>
+  </div>
+</body>
+
+<script type="module">
+  //Элементы video и canvas - массивы, поэтому указываем индексы
+  const videoElement = document.getElementsByClassName('input_video')[0];
+  const canvasElement = document.getElementsByClassName('output_canvas')[0];
+  const canvasCtx = canvasElement.getContext('2d');
+
+  function onResults(results) {
+    
+    //сохранение начального состояния скриншота фона
+    canvasCtx.save();
+
+    //рисование рамки-кадра 
+    canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
+
+    //Заготовка для наложения скриншотов на видео с прозрачной областью. Делаем прозрачными все пиксели, не входящие в маску. 
+    //globalCompositeOperation - свойство, определяющее выведение фигуры на холст и комбинирование с фигурами, созданными ранее
+    //'destination-atop' - существующая фигура сохраняется там, где она не перекрывает новую (центр изображения будет прозрачен).
+    canvasCtx.globalCompositeOperation = 'destination-atop';
+    //очистка предыдущих скриншотов, остается только последний
+    canvasCtx.drawImage(results.segmentationMask, 0, 0, canvasElement.width, canvasElement.height);
+
+    //Размытие скриншота.
+    canvasCtx.filter = 'blur(7px)';
+    //'destination-over' - новые скрины визуализируются позади уже добавленных на холст, т.е. позади размытого скрина.
+    canvasCtx.globalCompositeOperation = 'destination-over';
+    canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
+
+    //Восстанавливаем исходный скриншот, который накладывается на новый в соответствии с маской
+    canvasCtx.restore();
+  }
+
+  //Итого примерно получается размытый фон с четким изображением посередине, но не по контуру фигуры человека.
+  //Используем SelfieSegmentation для выделения фигуры человека с видео.
+  //настройка принимает числа 0 и 1, где 0 означает общую модель распознавания, а 1 — ландшафтную. Распознавание с использованием общей модели является более точным, но менее быстрым. 
+
+  const selfieSegmentation = new SelfieSegmentation({locateFile: (file) => {
+    return `https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/${file}`;
+  }});
+  selfieSegmentation.setOptions({
+    modelSelection: 1,
+  });
+  selfieSegmentation.onResults(onResults);
+
+  const camera = new Camera(videoElement, {
+    onFrame: async () => {
+      await selfieSegmentation.send({image: videoElement});
+    },
+    width: 640,
+    height: 480
+  });
+  camera.start();
+  </script>
+
+</html>
